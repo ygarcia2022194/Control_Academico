@@ -1,6 +1,6 @@
 const {Router} = require('express');
 const {check} = require('express-validator');
-const { cursoPost } = require('../controllers/cursoController');
+const { cursoPost, cursosGet } = require('../controllers/cursoController');
 
 const {cursoExistente} = require('../helpers/db-validators');
 const { validarCampos } = require('../middlewares');
@@ -16,5 +16,5 @@ router.post(
         validarCampos
     ], cursoPost)
 
-
+router.get("/", cursosGet);
     module.exports = router;
