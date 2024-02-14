@@ -18,8 +18,7 @@ const UsuarioSchema = Schema({
     },
     role:{
         type: String,
-        default: "STUDENT_ROLE",
-        enum: ["TEACHER_ROLE", "STUDENT_ROLE"]
+        default: 'STUDENT_ROLE'
     },
     estado:{
         type: Boolean,
