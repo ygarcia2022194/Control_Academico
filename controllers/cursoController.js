@@ -25,7 +25,41 @@ const cursosGet = async (req, res = response) =>{
     })
 }
 
+const getCursoById = async (req, res)=>{
+    const {id} = req.params;
+    const curso = await Curso.findOne({_id: id});
+    res.status(200).json({
+        curso
+    });
+}
+
+const putCursos = async (req, res= response) =>{
+    const {id} = req.params;
+    const{_id, ...resto} = req.body;
+
+    await Curso.findByIdAndUpdate(id, resto);
+    const curso = Curso.findOne({id});
+    res.status(200).json({
+        msg: 'Usuario actualizado exitosamente!!!',
+        curso
+    });
+}
+
+const cursoDelete = async (req, res) => {
+    const {id} = req.params;
+    const curso = await Curso.findByIdAndUpdate(id, {estado: false});
+    const cursoAutenticado = req.curso;
+
+    res.status(200).json({
+        msg: 'Usuario a eliminar',
+        curso,
+        cursoAutenticado
+    })
+}
 module.exports = {
     cursoPost,
-    cursosGet
+    cursosGet,
+    getCursoById,
+    putCursos,
+    cursoDelete
 }
