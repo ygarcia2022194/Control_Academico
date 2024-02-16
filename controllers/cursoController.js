@@ -35,12 +35,11 @@ const getCursoById = async (req, res)=>{
 
 const putCursos = async (req, res= response) =>{
     const {id} = req.params;
-    const{_id, ...resto} = req.body;
-
+    const{_id, estado, ...resto} = req.body;
     await Curso.findByIdAndUpdate(id, resto);
     const curso = Curso.findOne({id});
     res.status(200).json({
-        msg: 'Usuario actualizado exitosamente!!!',
+        msg: 'Curso actualizado exitosamente!!!',
         curso
     });
 }
