@@ -2,6 +2,11 @@ const Role = require('../models/role');
 const Curso = require('../models/cursos');
 const Alumno = require('../models/alumno');
 
+const existeAsignacion = async (alumnoId, cursoId)=>{
+    const asignacion = await Alumno.findOne({_id: alumnoId, curso: cursoId});
+    return asignacion !== null;
+}
+
 const existeEmailA = async(correo = '')=>{
     const existeEmailA = await Alumno.findOne({correo});
     if(existeEmailA){
@@ -44,5 +49,6 @@ module.exports = {
     existenteEmail,
     cursoExistente,
     existeCursoById,
-    existeEmailA
+    existeEmailA,
+    existeAsignacion
 }

@@ -34,7 +34,28 @@ const alumnosGet = async (req, res = response)=>{
     });
 }
 
+const putAlumnos = async (req, res = response)=>{
+    const {id} = req.params;
+    const {curso, ...resto} = req.body;
+
+    try{
+        const existeCurso = await Curso.find({_id: {$in: curso}});
+        if(existeCurso.length !== curso.length){
+            return res.status(400).json({error: 'Alguno de los cursos que ingreso no esta en la base de datos'})
+        }
+        const alumno = await Alumno.findByIdAndUpdate(id, {...resto, curso});
+        res.status(200).json({
+            msg: 'Alumno actualizado',
+            alumno
+        })
+    }catch(e){
+        console.log(e);
+        res.status(500).json({error:'Error al actualizar el alumno'});
+    }
+}
+
 module.exports={
     alumnosPost,
-    alumnosGet
+    alumnosGet,
+    putAlumnos
 };
