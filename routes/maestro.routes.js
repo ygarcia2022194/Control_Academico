@@ -3,7 +3,8 @@ const { check } = require('express-validator');
 
 const { validarCampos } = require('../middlewares/validar-campos');
 
-const {maestrosPost} = require('../controllers/maestroController');
+const {maestrosPost, 
+        maestrosGet} = require('../controllers/maestroController');
 
 const { existenteEmail, existeMaestroById, } = require('../helpers/db-validators');
 
@@ -19,5 +20,5 @@ router.post(
         validarCampos,
     ], maestrosPost);
 
-
+router.get("/", maestrosGet)
 module.exports = router;
