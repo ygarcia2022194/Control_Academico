@@ -18,6 +18,23 @@ const alumnosPost = async (req, res)=> {
     });
 }
 
+const alumnosGet = async (req, res = response)=>{
+    const {limite, desde} = req.query;
+    const query = {estado: true};
+
+    const [total, alumnos] = await Promise.all([
+        Alumno.countDocuments(query),
+        Alumno.find(query)
+        .skip(Number(desde))
+        .limit(Number(limite))
+    ]);
+    res.status(200).json({
+        total,
+        alumnos
+    });
+}
+
 module.exports={
-    alumnosPost
+    alumnosPost,
+    alumnosGet
 };

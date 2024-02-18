@@ -2,11 +2,12 @@ const {Router} = require('express');
 const {check, validationResult} = require('express-validator');
 
 const {validarCampos} = require('../middlewares/validar-campos');
-const {alumnosPost}= require('../controllers/alumnoController');
+const {alumnosPost, 
+        alumnosGet}= require('../controllers/alumnoController');
 const {existeEmailA} = require('../helpers/db-validators');
 
 const router = Router();
-
+router.get("/", alumnosGet);
 router.post(
     "/",
     [
