@@ -1,6 +1,7 @@
 const Role = require('../models/role');
 const Curso = require('../models/cursos');
 const Alumno = require('../models/alumno');
+const Maestro = require('../models/maestro');
 
 const existeAsignacion = async (alumnoId, cursoId)=>{
     const asignacion = await Alumno.findOne({_id: alumnoId, curso: cursoId});
@@ -22,7 +23,7 @@ const esRoleValido = async(role = '')=> {
 }
 
 const existenteEmail = async (correo = '') => {
-    const existeEmail = await Usuario.findOne({correo});
+    const existeEmail = await Maestro.findOne({correo});
     if(existeEmail){
         throw new Error(`El correo ${correo} ya esta registrado`);
     }
