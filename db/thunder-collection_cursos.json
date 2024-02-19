@@ -1,0 +1,116 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "cursos",
+    "dateExported": "2024-02-19T01:14:39.645Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "5e4a1082-03d2-44c5-ad0e-44d2600f9d03",
+            "colId": "2b02fea3-aea7-4861-abd5-c791d1e5cd31",
+            "containerId": "",
+            "name": "agregar cursos",
+            "url": "http://localhost:3000/api/cursos",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-16T04:50:56.177Z",
+            "modified": "2024-02-19T01:13:39.704Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyN2NkNDI5YjRkZDIwZDg0N2IyM2IiLCJpYXQiOjE3MDgzMDUxNjQsImV4cCI6MTcwODMwODc2NH0.XjLC9pNdRKrrd7aavH8536RFOFEKiWw21xV3tEeMnlM"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCursos\": \"curso18\",\n  \"profesorCurso\": \"profesor18\",\n  \"descripcionCurso\": \"curso de programacion\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "84ca88ce-b247-4163-b722-69ea221362b7",
+            "colId": "2b02fea3-aea7-4861-abd5-c791d1e5cd31",
+            "containerId": "",
+            "name": "listar cursos",
+            "url": "http://localhost:3000/api/cursos?desde=0&limite=5",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-16T04:59:33.378Z",
+            "modified": "2024-02-16T06:01:22.842Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "desde",
+                    "value": "0",
+                    "isPath": false
+                },
+                {
+                    "name": "limite",
+                    "value": "5",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "faf61cbd-bd85-46b5-98ae-08a7cd383e3f",
+            "colId": "2b02fea3-aea7-4861-abd5-c791d1e5cd31",
+            "containerId": "",
+            "name": "buscar curso",
+            "url": "http://localhost:3000/api/cursos/65ceeab31d8029d0d8c164d8?desde=1&limite=5",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-16T05:17:56.380Z",
+            "modified": "2024-02-16T06:07:13.529Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "desde",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "limite",
+                    "value": "5",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "c39ad00b-d900-4a95-9ede-b89caad6838c",
+            "colId": "2b02fea3-aea7-4861-abd5-c791d1e5cd31",
+            "containerId": "",
+            "name": "actualizar curso",
+            "url": "http://localhost:3000/api/cursos/65ceec9c1d8029d0d8c164e8",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-16T06:01:11.850Z",
+            "modified": "2024-02-18T21:13:07.254Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCursos\": \"Tecnologia I\",\n  \"profesorCurso\": \"Braulio Echeverria\",\n  \"descripcionCurso\": \"teoria de java\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "195d5ddf-556f-42c5-861e-ec362aaf6e8d",
+            "colId": "2b02fea3-aea7-4861-abd5-c791d1e5cd31",
+            "containerId": "",
+            "name": "eliminar curso",
+            "url": "http://localhost:3000/api/cursos/65ceec8b1d8029d0d8c164df",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-16T06:23:47.130Z",
+            "modified": "2024-02-16T06:37:52.561Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

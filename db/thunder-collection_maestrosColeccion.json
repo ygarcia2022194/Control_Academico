@@ -1,0 +1,72 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "maestrosColeccion",
+    "dateExported": "2024-02-19T01:14:22.031Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9d553524-cd76-4ff6-90b5-83b64775d2e5",
+            "colId": "d0cbddcf-7cc9-4f87-b5e0-8d5f15435610",
+            "containerId": "",
+            "name": "agregar Maestros",
+            "url": "http://localhost:3000/api/maestros",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-18T23:48:14.273Z",
+            "modified": "2024-02-18T23:49:10.443Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Juan Galicia\",\n    \"correo\":\"juanga10@gmail.com\",\n    \"password\":\"123456\",\n    \"telefono\":\"58152768\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0265e426-86f3-4838-b356-00a44186cb0c",
+            "colId": "d0cbddcf-7cc9-4f87-b5e0-8d5f15435610",
+            "containerId": "",
+            "name": "listar maestros",
+            "url": "http://localhost:3000/api/maestros?desde=0&limite=1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-18T23:57:05.451Z",
+            "modified": "2024-02-18T23:57:27.664Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "desde",
+                    "value": "0",
+                    "isPath": false
+                },
+                {
+                    "name": "limite",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "7bb27b97-9d73-4860-a57f-87fa9068ce69",
+            "colId": "d0cbddcf-7cc9-4f87-b5e0-8d5f15435610",
+            "containerId": "",
+            "name": "impartirCursos",
+            "url": "http://localhost:3000/api/maestros/65d297dd47b3358dde899718",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-02-19T00:06:34.860Z",
+            "modified": "2024-02-19T00:11:25.738Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"curso\": [\"65ceeab31d8029d0d8c164d8\",\n            \"65ceec831d8029d0d8c164dc\",\n            \"65ceec901d8029d0d8c164e2\"]\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
