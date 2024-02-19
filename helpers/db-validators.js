@@ -7,7 +7,10 @@ const existeAsignacion = async (alumnoId, cursoId)=>{
     const asignacion = await Alumno.findOne({_id: alumnoId, curso: cursoId});
     return asignacion !== null;
 }
-
+const existeAsignacionMaestro = async (maestroId, cursoId)=>{
+    const asignacion = await Maestro.findOne({id});
+    return asignacion !== null;
+}
 const existeEmailA = async(correo = '')=>{
     const existeEmailA = await Alumno.findOne({correo});
     if(existeEmailA){
@@ -51,5 +54,6 @@ module.exports = {
     cursoExistente,
     existeCursoById,
     existeEmailA,
-    existeAsignacion
+    existeAsignacion,
+    existeAsignacionMaestro
 }

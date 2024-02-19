@@ -37,7 +37,28 @@ const maestrosGet = async (req, res = response) => {
     });
 }
 
+const putMaestros = async (req, res= response)=>{
+    const {id} = req.params;
+    const {curso, ...resto} = req.body;
+    try {
+        const cursoExistenteMaes = await Curso.find({_id: {$in: curso}});
+        if(cursoExistenteMaes.lenght !== curso.lenght){
+            return res.status(400).json({error: 'uno o mas cursos no existen'});
+        }
+        const maestro = await Maestro.findByIdAndUpdate(id, {...resto,curso});
+
+        res.status(200).json({
+            msg: 'Mestro actualizado',
+            maestro
+        })
+    } catch (e) {
+        console.log(e);
+        res.status(500).json({error: "Error al actualizar el maestro"});            
+    }
+}
+
 module.exports ={
     maestrosPost,
-    maestrosGet
+    maestrosGet,
+    putMaestros
 }
