@@ -3,6 +3,17 @@ const Curso = require('../models/cursos');
 const Alumno = require('../models/alumno');
 const Maestro = require('../models/maestro');
 
+const buscarCursoPorNombre = async(nombre)=>{
+    try {
+        const curso = await Curso.findOne({nombreCursos: nombre});
+        return curso;
+    } catch (error) {
+        console.error('Error al buscar el curso por el nombre:',error);
+        throw new Error('Error al buscar el curso por nombre');
+
+    }
+}
+
 const existeAsignacion = async (alumnoId, cursoId)=>{
     const asignacion = await Alumno.findOne({_id: alumnoId, curso: cursoId});
     return asignacion !== null;
@@ -55,5 +66,6 @@ module.exports = {
     existeCursoById,
     existeEmailA,
     existeAsignacion,
-    existeAsignacionMaestro
+    existeAsignacionMaestro,
+    buscarCursoPorNombre
 }

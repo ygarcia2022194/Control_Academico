@@ -1,44 +1,44 @@
 {
     "client": "Thunder Client",
     "collectionName": "cursos",
-    "dateExported": "2024-02-19T01:14:39.645Z",
+    "dateExported": "2024-02-27T23:15:41.945Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "5e4a1082-03d2-44c5-ad0e-44d2600f9d03",
-            "colId": "2b02fea3-aea7-4861-abd5-c791d1e5cd31",
+            "_id": "1bd5e0e0-554a-4ad8-b33a-983357d98915",
+            "colId": "aab0eee8-031e-4197-be61-51b19e83efef",
             "containerId": "",
             "name": "agregar cursos",
             "url": "http://localhost:3000/api/cursos",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-16T04:50:56.177Z",
-            "modified": "2024-02-19T01:13:39.704Z",
+            "created": "2024-02-27T19:00:54.380Z",
+            "modified": "2024-02-27T23:10:51.831Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyN2NkNDI5YjRkZDIwZDg0N2IyM2IiLCJpYXQiOjE3MDgzMDUxNjQsImV4cCI6MTcwODMwODc2NH0.XjLC9pNdRKrrd7aavH8536RFOFEKiWw21xV3tEeMnlM"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRlMzUxNmZkNTliYmUzZjkyM2IyNjEiLCJpYXQiOjE3MDkwNzUzOTksImV4cCI6MTcwOTA3ODk5OX0.jNX75MYd869chwqlGPK8Wcpul9QcjsKTtaVK3BgJSCI"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombreCursos\": \"curso18\",\n  \"profesorCurso\": \"profesor18\",\n  \"descripcionCurso\": \"curso de programacion\"\n}",
+                "raw": "{\n  \"nombreCursos\": \"curso5\",\n  \"profesorCurso\": \"profesor5\",\n  \"descripcionCurso\": \"curso de programacion\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "84ca88ce-b247-4163-b722-69ea221362b7",
-            "colId": "2b02fea3-aea7-4861-abd5-c791d1e5cd31",
+            "_id": "5c22262f-c1e6-4ed9-8782-41ef84cf400e",
+            "colId": "aab0eee8-031e-4197-be61-51b19e83efef",
             "containerId": "",
             "name": "listar cursos",
             "url": "http://localhost:3000/api/cursos?desde=0&limite=5",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-16T04:59:33.378Z",
-            "modified": "2024-02-16T06:01:22.842Z",
+            "created": "2024-02-27T19:00:54.381Z",
+            "modified": "2024-02-27T19:00:54.381Z",
             "headers": [],
             "params": [
                 {
@@ -55,60 +55,59 @@
             "tests": []
         },
         {
-            "_id": "faf61cbd-bd85-46b5-98ae-08a7cd383e3f",
-            "colId": "2b02fea3-aea7-4861-abd5-c791d1e5cd31",
+            "_id": "075844c9-d875-4d89-8b0b-42636a837d5d",
+            "colId": "aab0eee8-031e-4197-be61-51b19e83efef",
             "containerId": "",
             "name": "buscar curso",
-            "url": "http://localhost:3000/api/cursos/65ceeab31d8029d0d8c164d8?desde=1&limite=5",
+            "url": "http://localhost:3000/api/cursos/65de39caec15c35525438317",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-02-16T05:17:56.380Z",
-            "modified": "2024-02-16T06:07:13.529Z",
+            "created": "2024-02-27T19:00:54.382Z",
+            "modified": "2024-02-27T22:08:22.974Z",
             "headers": [],
-            "params": [
-                {
-                    "name": "desde",
-                    "value": "1",
-                    "isPath": false
-                },
-                {
-                    "name": "limite",
-                    "value": "5",
-                    "isPath": false
-                }
-            ],
+            "params": [],
             "tests": []
         },
         {
-            "_id": "c39ad00b-d900-4a95-9ede-b89caad6838c",
-            "colId": "2b02fea3-aea7-4861-abd5-c791d1e5cd31",
+            "_id": "68214069-a6ad-4b2f-8667-0448b9d8f955",
+            "colId": "aab0eee8-031e-4197-be61-51b19e83efef",
             "containerId": "",
             "name": "actualizar curso",
-            "url": "http://localhost:3000/api/cursos/65ceec9c1d8029d0d8c164e8",
+            "url": "http://localhost:3000/api/cursos/65de39caec15c35525438317",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-02-16T06:01:11.850Z",
-            "modified": "2024-02-18T21:13:07.254Z",
-            "headers": [],
+            "created": "2024-02-27T19:00:54.383Z",
+            "modified": "2024-02-27T19:39:04.226Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRlMzUxNmZkNTliYmUzZjkyM2IyNjEiLCJpYXQiOjE3MDkwNjI1ODYsImV4cCI6MTcwOTA2NjE4Nn0.gEtWkfzGwPaPzkn0gmpvv-EXwAnVYiqMFqh4EExG0Ls"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombreCursos\": \"Tecnologia I\",\n  \"profesorCurso\": \"Braulio Echeverria\",\n  \"descripcionCurso\": \"teoria de java\"\n}",
+                "raw": "{\n  \"nombreCursos\": \"Matematicas\",\n  \"profesorCurso\": \"Josue Duarte\",\n  \"descripcionCurso\": \"Derivadas\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "195d5ddf-556f-42c5-861e-ec362aaf6e8d",
-            "colId": "2b02fea3-aea7-4861-abd5-c791d1e5cd31",
+            "_id": "e3cb5e10-aeff-4b2c-962f-58ece354866e",
+            "colId": "aab0eee8-031e-4197-be61-51b19e83efef",
             "containerId": "",
             "name": "eliminar curso",
-            "url": "http://localhost:3000/api/cursos/65ceec8b1d8029d0d8c164df",
+            "url": "http://localhost:3000/api/cursos/65de39dcec15c3552543831b",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-02-16T06:23:47.130Z",
-            "modified": "2024-02-16T06:37:52.561Z",
-            "headers": [],
+            "created": "2024-02-27T19:00:54.384Z",
+            "modified": "2024-02-27T19:42:22.952Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRlMzUxNmZkNTliYmUzZjkyM2IyNjEiLCJpYXQiOjE3MDkwNjI1ODYsImV4cCI6MTcwOTA2NjE4Nn0.gEtWkfzGwPaPzkn0gmpvv-EXwAnVYiqMFqh4EExG0Ls"
+                }
+            ],
             "params": [],
             "tests": []
         }

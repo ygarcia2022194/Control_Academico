@@ -30,5 +30,10 @@ const MaestroSchema = Schema({
     }
 });
 
+MaestroSchema.methods.toJSON = function(){
+    const{__v, password, _id, ...maestro} = this.toObject();
+    maestro.uid = _id;
+    return maestro;
+}
 
 module.exports = model('Maestro', MaestroSchema);

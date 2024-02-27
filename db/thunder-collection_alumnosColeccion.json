@@ -1,39 +1,39 @@
 {
     "client": "Thunder Client",
     "collectionName": "alumnosColeccion",
-    "dateExported": "2024-02-19T01:14:17.668Z",
+    "dateExported": "2024-02-27T23:15:33.234Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "cbdbce28-b8b0-41c2-93a6-a9d3d8bddcd7",
-            "colId": "03ca8b7c-886c-4bdc-80f8-e73ad5e20a38",
+            "_id": "56b25ae0-50a4-461a-9309-7e062ce3b95a",
+            "colId": "7e0e6379-44b8-4e0e-98f2-429ebc266c41",
             "containerId": "",
             "name": "agregar Alumnos",
             "url": "http://localhost:3000/api/alumnos",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-18T21:47:45.449Z",
-            "modified": "2024-02-18T22:01:29.470Z",
+            "created": "2024-02-27T19:00:54.372Z",
+            "modified": "2024-02-27T22:40:32.268Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"alumno15\",\n  \"correo\": \"alumno15-2022194@kinal.edu.gt\",\n  \"password\": \"123456\"\n}",
+                "raw": "{\n  \"nombre\": \"alumno\",\n  \"correo\": \"alumno-2022194@kinal.edu.gt\",\n  \"password\": \"123456\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "d1006833-226d-41a6-81bc-ecabdd20eae8",
-            "colId": "03ca8b7c-886c-4bdc-80f8-e73ad5e20a38",
+            "_id": "f01dce7d-66c1-4942-9086-2e639f40ca7b",
+            "colId": "7e0e6379-44b8-4e0e-98f2-429ebc266c41",
             "containerId": "",
             "name": "listar Alumnos",
             "url": "http://localhost:3000/api/alumnos?desde=0&limite=15",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-18T22:11:11.472Z",
-            "modified": "2024-02-18T22:11:52.584Z",
+            "created": "2024-02-27T19:00:54.374Z",
+            "modified": "2024-02-27T19:00:54.374Z",
             "headers": [],
             "params": [
                 {
@@ -50,20 +50,25 @@
             "tests": []
         },
         {
-            "_id": "f9a8e6d1-6adb-4b91-b494-17838713296f",
-            "colId": "03ca8b7c-886c-4bdc-80f8-e73ad5e20a38",
+            "_id": "1ebace60-3975-409a-9d1c-49c07355cb2e",
+            "colId": "7e0e6379-44b8-4e0e-98f2-429ebc266c41",
             "containerId": "",
             "name": "asignar cursos",
-            "url": "http://localhost:3000/api/alumnos/65d27e3929b4dd20d847b266",
+            "url": "http://localhost:3000/api/alumnos/65de64e06bfafcea1ffeac8a",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-02-18T22:36:48.909Z",
-            "modified": "2024-02-18T22:40:51.407Z",
-            "headers": [],
+            "created": "2024-02-27T19:00:54.375Z",
+            "modified": "2024-02-27T23:13:08.540Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRlNjRlMDZiZmFmY2VhMWZmZWFjOGEiLCJpYXQiOjE3MDkwNzU1NDQsImV4cCI6MTcwOTA3OTE0NH0._WQJRxxQOLRFTHuoUBF4I2zuL2dn4JeTV1AYvKqatTM"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"curso\": [\"65ceeab31d8029d0d8c164d8\",\n            \"65ceec831d8029d0d8c164dc\",\n            \"65ceec901d8029d0d8c164e2\"\n    ]\n}",
+                "raw": "{\n  \"curso\": [\"curso1\",\n            \"curso3\",\n            \"curso2\"\n    ]\n}",
                 "form": []
             },
             "tests": []

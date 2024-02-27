@@ -13,7 +13,7 @@ const teacherRole = (req, res, next) =>{
             msg: `${user.nombre} no es un Maestro, no tines acceso a esto`
         });
     };
-    next
+    next();
 }
 
 const tieneRolAutorizado = (...roles)=>{

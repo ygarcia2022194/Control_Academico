@@ -1,39 +1,39 @@
 {
     "client": "Thunder Client",
     "collectionName": "maestrosColeccion",
-    "dateExported": "2024-02-19T01:14:22.031Z",
+    "dateExported": "2024-02-27T23:15:51.457Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "9d553524-cd76-4ff6-90b5-83b64775d2e5",
-            "colId": "d0cbddcf-7cc9-4f87-b5e0-8d5f15435610",
+            "_id": "915e6022-c901-4a67-90ad-7e29b03f20d9",
+            "colId": "dbec8808-2b76-4578-aca2-c762b0910873",
             "containerId": "",
             "name": "agregar Maestros",
             "url": "http://localhost:3000/api/maestros",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-18T23:48:14.273Z",
-            "modified": "2024-02-18T23:49:10.443Z",
+            "created": "2024-02-27T19:00:54.399Z",
+            "modified": "2024-02-27T19:16:38.730Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\":\"Juan Galicia\",\n    \"correo\":\"juanga10@gmail.com\",\n    \"password\":\"123456\",\n    \"telefono\":\"58152768\"\n}",
+                "raw": "{\n  \"nombre\":\"Juan Galicia\",\n    \"correo\":\"juanga10@gmail.com\",\n    \"password\":\"123456\",\n    \"telefono\":\"58152768\",\n    \"role\": \"TEACHER_ROLE\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "0265e426-86f3-4838-b356-00a44186cb0c",
-            "colId": "d0cbddcf-7cc9-4f87-b5e0-8d5f15435610",
+            "_id": "e142e515-6604-476d-943a-68af445c3602",
+            "colId": "dbec8808-2b76-4578-aca2-c762b0910873",
             "containerId": "",
             "name": "listar maestros",
             "url": "http://localhost:3000/api/maestros?desde=0&limite=1",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-18T23:57:05.451Z",
-            "modified": "2024-02-18T23:57:27.664Z",
+            "created": "2024-02-27T19:00:54.400Z",
+            "modified": "2024-02-27T19:00:54.400Z",
             "headers": [],
             "params": [
                 {
@@ -50,20 +50,20 @@
             "tests": []
         },
         {
-            "_id": "7bb27b97-9d73-4860-a57f-87fa9068ce69",
-            "colId": "d0cbddcf-7cc9-4f87-b5e0-8d5f15435610",
+            "_id": "613d1305-5308-4fe7-b31b-91da563a6551",
+            "colId": "dbec8808-2b76-4578-aca2-c762b0910873",
             "containerId": "",
             "name": "impartirCursos",
-            "url": "http://localhost:3000/api/maestros/65d297dd47b3358dde899718",
+            "url": "http://localhost:3000/api/maestros/65de33c6fd59bbe3f923b256",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-02-19T00:06:34.860Z",
-            "modified": "2024-02-19T00:11:25.738Z",
+            "created": "2024-02-27T19:00:54.401Z",
+            "modified": "2024-02-27T19:46:29.979Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"curso\": [\"65ceeab31d8029d0d8c164d8\",\n            \"65ceec831d8029d0d8c164dc\",\n            \"65ceec901d8029d0d8c164e2\"]\n}",
+                "raw": "{\n  \"curso\": [\"65cd3a502be1518d7b64838b\",\n            \"65de39caec15c35525438317\",\n            \"65de39dcec15c3552543831b\"]\n}",
                 "form": []
             },
             "tests": []

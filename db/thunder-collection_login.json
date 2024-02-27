@@ -1,25 +1,25 @@
 {
     "client": "Thunder Client",
     "collectionName": "login",
-    "dateExported": "2024-02-19T01:14:00.507Z",
+    "dateExported": "2024-02-27T23:15:47.137Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "b5e62ded-c280-493b-b57e-a6016bae55f0",
-            "colId": "bfa61fc1-87bd-4643-a942-3896f47a8b45",
+            "_id": "609e4f22-93c0-452f-9272-3abc47565fb1",
+            "colId": "727d943e-886e-4e41-8d05-f6012f0000b1",
             "containerId": "",
             "name": "login",
             "url": "http://localhost:3000/api/auth/login",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-19T00:15:03.256Z",
-            "modified": "2024-02-19T01:12:44.580Z",
+            "created": "2024-02-27T19:00:54.390Z",
+            "modified": "2024-02-27T23:12:24.133Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n   \"correo\":\"ygarcia-2022194@kinal.edu.gt\",\n    \"password\":\"123456\"\n}",
+                "raw": "{\n   \"correo\":\"alumno-2022194@kinal.edu.gt\",\n    \"password\":\"123456\"\n}",
                 "form": []
             },
             "tests": []
